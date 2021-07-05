@@ -34,6 +34,7 @@ export default class App extends Component {
         AOS.init({
             duration: 1000,
             startEvent: "DOMContentLoaded",
+            offset: 100,
         });
 
         if (localStorage.getItem("authenticated")) {
@@ -49,7 +50,6 @@ export default class App extends Component {
             } catch (e) {
                 this.setState({ loggedin: false });
                 localStorage.clear();
-                console.log(e);
             }
         }
     };

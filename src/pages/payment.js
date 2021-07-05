@@ -49,7 +49,7 @@ class Payment extends Component {
         });
 
         rzp1.on("payment.cancelled", (response) => {
-            console.log("Failed");
+            console.log("Payment Failed!");
         });
 
         rzp1.open();
@@ -66,7 +66,22 @@ class Payment extends Component {
     };
 
     render() {
-        return <div></div>;
+        return (
+            <div>
+                {this.state.error ? (
+                    <div>
+                        <h3>{this.state.error}</h3>
+                        <button
+                            onClick={() => {
+                                this.props.history.push("/cart");
+                            }}
+                        >
+                            Go back to Cart!
+                        </button>
+                    </div>
+                ) : null}
+            </div>
+        );
     }
 }
 export default withRouter(Payment);

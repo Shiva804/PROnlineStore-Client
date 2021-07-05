@@ -422,6 +422,8 @@ tr:nth-child(even) {
 
 #list {
     text-align: center;
+    margin-bottom: auto;
+    margin-top: 20%;
 }
 
 #list li {
@@ -582,24 +584,22 @@ tr:nth-child(even) {
     resize: none;
 }
 
-#login,
-#side-login,
-#side-logout {
+#login {
     color: #cc2129;
     border-color: #cc2129;
 }
-
-#side-login {
-    margin-top: 10%;
-}
 #side-login,
 #side-logout {
-    width: 90%;
+    background-color: #cc2129;
+    color: white;
+}
+
+#side-login,
+#side-logout {
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-}
-#side-logout {
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 #paper {
@@ -783,7 +783,7 @@ tr:nth-child(even) {
 
 #side-profile h3 {
     padding-left: 10px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 #icons {
@@ -1089,6 +1089,7 @@ footer.light .footer-copyright {
     width: 30%;
     margin-right: 30px;
 }
+
 #sub-select-mobile {
     margin-left: auto;
     width: 40%;
@@ -1395,7 +1396,7 @@ footer.light .footer-copyright {
     margin-left: 4%;
     box-shadow: 1px 1px 5px black;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 7px;
 }
 #orderpage {
     width: 95%;
@@ -1524,11 +1525,9 @@ footer.light .footer-copyright {
 #order-address {
     width: 20%;
     margin-top: 20px;
-    /* border: 1px solid black; */
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.349);
-    /* box-shadow: 1px 1px 10px gray; */
 }
 #order-address h5 {
     color: brown;
@@ -1568,6 +1567,9 @@ footer.light .footer-copyright {
 
 #paymentsuccess-div h5 {
     color: brown;
+}
+.fa.fa-caret-down {
+    display: none;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -1684,6 +1686,7 @@ footer.light .footer-copyright {
         padding: 0px;
         letter-spacing: 1px;
         padding: 20px;
+        margin-top: 30px;
     }
     #one div {
         /* padding: 0 100px 50px 100px; */
@@ -1718,6 +1721,7 @@ footer.light .footer-copyright {
         padding: 0px;
         letter-spacing: 1px;
         padding: 20px;
+        margin-top: 30px;
     }
     #two-div {
         padding: 20px;
@@ -1850,10 +1854,10 @@ footer.light .footer-copyright {
         right: 0;
         top: 0;
         width: 100%;
-        margin-top: 60px;
+        margin-top: 55px;
         padding: 20px;
         margin-right: 0%;
-        background-color: white;
+        background-color: #f8f9fa;
         display: inline-flex;
     }
 
@@ -1921,6 +1925,17 @@ footer.light .footer-copyright {
 }
 
 @media only screen and (max-width: 600px) {
+    .fa.fa-caret-down {
+        display: inline-flex;
+        cursor: pointer;
+    }
+    .shippingaddress {
+        display: none;
+    }
+    #order-address {
+        width: 90%;
+        margin: auto;
+    }
     #pay {
         width: 85%;
     }
@@ -1979,7 +1994,7 @@ footer.light .footer-copyright {
         width: 90%;
     }
     #carousel-item {
-        height: 80vh;
+        height: 60vh;
         width: 100%;
         text-align: center;
     }
@@ -2070,6 +2085,9 @@ footer.light .footer-copyright {
 }
 
 @media only screen and (max-width: 350px) {
+    #search-main-mobile {
+        margin-top: 50px;
+    }
     #mobile-finalprice h5,
     #mobile-finalprice h4 {
         font-size: 1em;
@@ -2109,5 +2127,9 @@ footer.light .footer-copyright {
     #brand {
         font-size: 1.2em;
         margin-top: 3px;
+    }
+
+    #carousel-item {
+        height: 66vh;
     }
 }

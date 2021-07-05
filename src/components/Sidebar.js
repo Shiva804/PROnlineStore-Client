@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { SwipeableDrawer, Avatar, Button } from "@material-ui/core";
 import { withRouter } from "react-router";
 import axios from "../config";
-import { min } from "moment";
 
 class Sidebar extends Component {
     state = {
@@ -64,12 +63,7 @@ class Sidebar extends Component {
                         <>
                             {localStorage.getItem("authenticated") ? (
                                 <div id="side-profile">
-                                    <Avatar
-                                        id="side-avatar"
-                                        onClick={() => {
-                                            this.toggleProfile();
-                                        }}
-                                    >
+                                    <Avatar id="side-avatar">
                                         {localStorage
                                             .getItem("name")[0]
                                             .toUpperCase()}
@@ -77,15 +71,10 @@ class Sidebar extends Component {
                                     <h3> {localStorage.getItem("name")}</h3>
                                 </div>
                             ) : (
-                                <Button
-                                    id="side-login"
-                                    variant="outlined"
-                                    onClick={() => {
-                                        this.props.handleOpen();
-                                    }}
-                                >
-                                    Login
-                                </Button>
+                                <div id="side-profile">
+                                    <Avatar>G</Avatar>
+                                    <h3> Guest</h3>
+                                </div>
                             )}
                             <ul id="list">
                                 <li
@@ -152,24 +141,35 @@ class Sidebar extends Component {
                                     ></i>
                                     &nbsp; Contact
                                 </li>
+
+                                {this.props.loggedin ? (
+                                    <Button
+                                        id="side-logout"
+                                        variant="outlined"
+                                        onClick={() => {
+                                            this.props.logout();
+                                            localStorage.clear();
+                                            this.props.history.push("/");
+                                        }}
+                                    >
+                                        Logout &nbsp;
+                                        <i
+                                            class="fa fa-sign-out"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </Button>
+                                ) : (
+                                    <Button
+                                        id="side-login"
+                                        variant="outlined"
+                                        onClick={() => {
+                                            this.props.handleOpen();
+                                        }}
+                                    >
+                                        Login
+                                    </Button>
+                                )}
                             </ul>
-                            {this.props.loggedin ? (
-                                <Button
-                                    id="side-logout"
-                                    variant="outlined"
-                                    onClick={() => {
-                                        this.props.logout();
-                                        localStorage.clear();
-                                        this.props.history.push("/");
-                                    }}
-                                >
-                                    Logout &nbsp;
-                                    <i
-                                        class="fa fa-sign-out"
-                                        aria-hidden="true"
-                                    ></i>
-                                </Button>
-                            ) : null}
                         </>
                     ) : null}
                 </SwipeableDrawer>

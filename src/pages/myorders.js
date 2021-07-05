@@ -16,6 +16,16 @@ export default class Myorders extends Component {
 
         this.setState({ orders: orders.data.orders });
     };
+    toggleShipping = (i) => {
+        if (
+            document.getElementById(`shipping${i}`).style.display == "none" ||
+            !document.getElementById(`shipping${i}`).style.display
+        ) {
+            document.getElementById(`shipping${i}`).style.display = "block";
+        } else {
+            document.getElementById(`shipping${i}`).style.display = "none";
+        }
+    };
     render() {
         return (
             <div>
@@ -27,7 +37,7 @@ export default class Myorders extends Component {
 
                         <Container id="orderpage" data-aos="fade-down">
                             {this.state.orders.length > 0 ? (
-                                this.state.orders.map((order) => (
+                                this.state.orders.map((order, i) => (
                                     <div class="card" id="cart-card">
                                         <div id="cart-card-img">
                                             <img
@@ -95,9 +105,23 @@ export default class Myorders extends Component {
                                             </h6>
                                         </div>
                                         <div id="order-address">
-                                            <h5>Shipping Address:</h5>
+                                            <h5>
+                                                Shipping Address&nbsp;
+                                                <i
+                                                    class="fa fa-caret-down"
+                                                    aria-hidden="true"
+                                                    onClick={() => {
+                                                        this.toggleShipping(i);
+                                                    }}
+                                                ></i>
+                                            </h5>
                                             <br></br>
-                                            <p>{order.shipping_address}</p>
+                                            <p
+                                                id={`shipping${i}`}
+                                                className="shippingaddress"
+                                            >
+                                                {order.shipping_address}
+                                            </p>
                                         </div>
                                     </div>
                                 ))
