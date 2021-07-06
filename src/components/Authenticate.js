@@ -297,7 +297,7 @@ export default class Login extends Component {
                                         <button
                                             type="submit"
                                             class="btn btn-primary"
-                                            id="login-submit"
+                                            id="submit"
                                             onClick={(e) => {
                                                 this.handleLogin(e);
                                             }}
@@ -402,7 +402,7 @@ export default class Login extends Component {
                                         <button
                                             type="submit"
                                             class="btn btn-primary"
-                                            id="signup-submit"
+                                            id="submit"
                                             onClick={(e) => {
                                                 this.handleSignup(e);
                                             }}

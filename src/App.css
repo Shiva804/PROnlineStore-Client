@@ -655,8 +655,7 @@ tr:nth-child(even) {
     color: brown;
 }
 
-#login-submit,
-#signup-submit {
+#submit {
     margin-top: 4%;
     width: 60%;
     border-color: rgba(253, 38, 38, 0.89);
@@ -665,8 +664,7 @@ tr:nth-child(even) {
     border-radius: 25px;
 }
 
-#login-submit:hover,
-#signup-submit:hover {
+#submit:hover {
     color: rgba(253, 38, 38, 0.89);
     background-color: white;
 }
@@ -1882,8 +1880,7 @@ footer.light .footer-copyright {
     #close {
         margin-left: 88%;
     }
-    #login-submit,
-    #signup-submit {
+    #submit {
         width: 90%;
     }
     #f1 {
@@ -1939,11 +1936,6 @@ footer.light .footer-copyright {
     #label {
         display: none;
     }
-
-    #signup-submit {
-        margin-top: -9%;
-        width: 100%;
-    }
     .fa.fa-caret-down {
         display: inline-flex;
         cursor: pointer;
@@ -1992,7 +1984,7 @@ footer.light .footer-copyright {
     #authenticate {
         width: 95%;
         height: max-content;
-        margin-top: 15%;
+        margin-top: 10%;
     }
 
     #authenticate h3 {
