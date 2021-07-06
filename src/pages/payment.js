@@ -20,6 +20,7 @@ class Payment extends Component {
         } else {
             razor_key = process.env.REACT_APP_PROD_KEY_ID;
         }
+        console.log(razor_key);
 
         var options = {
             key: razor_key, // Enter the Key ID generated from the Dashboard
