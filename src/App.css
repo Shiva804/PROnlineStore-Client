@@ -843,7 +843,14 @@ tr:nth-child(even) {
     font-weight: bolder;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 19px;
+    font-size: 16px;
+}
+
+#fd-m {
+    margin: auto;
+    color: rgb(6, 92, 11);
+    font-size: 14px;
+    padding: 5px;
 }
 
 #f-tnc {
@@ -1705,7 +1712,6 @@ footer.light .footer-copyright {
         font-weight: 800;
         font-family: "Cormorant Garamond", serif;
         font-size: larger;
-        background-color: rgba(255, 255, 255, 0.5);
         margin: 0px;
         width: 100%;
         text-align: center;

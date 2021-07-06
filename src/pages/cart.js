@@ -151,6 +151,7 @@ class Cart extends Component {
                                                 )}
                                             </h5>
                                         </div>
+                                        <p id="fd-m">*Free Delivery*</p>
 
                                         <p
                                             id="tnc"
@@ -281,7 +282,7 @@ class Cart extends Component {
 
                                             <br />
                                         </div>
-                                        <p id="fd">Free Delivery</p>
+                                        <p id="fd">*Free Delivery*</p>
                                     </>
                                 ) : null}
                                 <p
