@@ -51,14 +51,14 @@ export default class Home extends Component {
                 <section id="one" data-aos="fade-right">
                     <div>
                         <br />
-                        <h3>PR FURNITURES</h3>
+                        <h3>PR ONLINE STORE</h3>
                         <hr></hr>
-                        PR Furnitures, A part of PR Consultants provide various
-                        furnitures which mainly concentrates on small and large
-                        scale industry.We are humbled to have touched the lives
-                        of lot of people with wide range of home and office
-                        furniture, Workstations, Conference Set Up, Variety of
-                        Chairs and top-grade dining SetUp.
+                        PR Online Store, A part of PR Consultants provide
+                        various furnitures which mainly concentrates on small
+                        and large scale industry.We are humbled to have touched
+                        the lives of lot of people with wide range of home and
+                        office furniture, Workstations, Conference Set Up,
+                        Variety of Chairs and top-grade dining SetUp.
                         <br />
                         <br />
                         We work as a team with mutual trust and shared
@@ -198,7 +198,7 @@ export default class Home extends Component {
                             <br />
                             <p>
                                 For a luxurious spin on industrial metal
-                                furniture, PR Furniture has an extensive
+                                furniture, PR Online Store has an extensive
                                 collection of Bar stools, Chairs, Workstation
                                 Sets and Many more. To add a soothing vibe to
                                 your garden and lounge, Our garden and lounge
