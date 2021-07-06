@@ -36,6 +36,7 @@ const responsive = {
 export default class Home extends Component {
     handleCategory = (e) => {
         this.props.history.push(`/product/${e.target.id}`);
+        window[`scrollTo`]({ top: 0, behavior: `smooth` });
     };
     componentDidMount = () => {
         document.getElementById("home").style.color = "#cc2129";
