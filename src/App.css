@@ -655,7 +655,8 @@ tr:nth-child(even) {
     color: brown;
 }
 
-#submit {
+#login-submit,
+#signup-submit {
     margin-top: 4%;
     width: 60%;
     border-color: rgba(253, 38, 38, 0.89);
@@ -664,7 +665,8 @@ tr:nth-child(even) {
     border-radius: 25px;
 }
 
-#submit:hover {
+#login-submit:hover,
+#signup-submit:hover {
     color: rgba(253, 38, 38, 0.89);
     background-color: white;
 }
@@ -1880,7 +1882,8 @@ footer.light .footer-copyright {
     #close {
         margin-left: 88%;
     }
-    #submit {
+    #login-submit,
+    #signup-submit {
         width: 90%;
     }
     #f1 {
@@ -1933,6 +1936,14 @@ footer.light .footer-copyright {
 }
 
 @media only screen and (max-width: 600px) {
+    #label {
+        display: none;
+    }
+
+    #signup-submit {
+        margin-top: -9%;
+        width: 100%;
+    }
     .fa.fa-caret-down {
         display: inline-flex;
         cursor: pointer;
