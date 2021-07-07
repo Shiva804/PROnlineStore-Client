@@ -55,16 +55,17 @@ export default class Myorders extends Component {
                                                 Rs.
                                                 {Math.round(
                                                     parseInt(
-                                                        order.Product.price.replaceAll(
-                                                            ",",
-                                                            ""
-                                                        )
+                                                        order.Product.price
+                                                            .toString()
+                                                            .replaceAll(",", "")
                                                     ) -
                                                         (parseInt(
-                                                            order.Product.price.replaceAll(
-                                                                ",",
-                                                                ""
-                                                            )
+                                                            order.Product.price
+                                                                .toString()
+                                                                .replaceAll(
+                                                                    ",",
+                                                                    ""
+                                                                )
                                                         ) *
                                                             25) /
                                                             100

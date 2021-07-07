@@ -117,7 +117,7 @@ export default class Admin extends Component {
     };
 
     showInput = async (name, price) => {
-        this.setState({ changeprice: price.replaceAll(",", "") });
+        this.setState({ changeprice: price.toString().replaceAll(",", "") });
         document.getElementById(`input-${name}`).style.display = "block";
         document.getElementById(`edit-${name}`).style.display = "none";
         document.getElementById(`change-${name}`).style.display = "block";
@@ -129,7 +129,7 @@ export default class Admin extends Component {
             {
                 name: name,
                 price: parseInt(
-                    this.state.changeprice.replaceAll(",", "")
+                    this.state.changeprice.toString().replaceAll(",", "")
                 ).toLocaleString("en-US"),
             },
             {
