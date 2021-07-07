@@ -23,11 +23,11 @@ export default class Admin extends Component {
                 const admindata = await axios.get("/admindata", {
                     withCredentials: true,
                 });
-                console.log(admindata.data);
                 this.setState({ orders: admindata.data.cart });
                 this.setState({ products: admindata.data.products });
             } catch (e) {
-                console.log(e);
+                sessionStorage.clear();
+                this.props.logout();
             }
         }
     };
@@ -98,7 +98,6 @@ export default class Admin extends Component {
             setTimeout(() => {
                 this.setState({ error: null });
             }, 3000);
-            console.log(e.response.data);
         }
     };
     render() {
