@@ -204,16 +204,17 @@ class Cart extends Component {
                                                 Rs.
                                                 {Math.round(
                                                     parseInt(
-                                                        product.Product.price.replaceAll(
-                                                            ",",
-                                                            ""
-                                                        )
+                                                        product.Product.price
+                                                            .toString()
+                                                            .replaceAll(",", "")
                                                     ) -
                                                         (parseInt(
-                                                            product.Product.price.replaceAll(
-                                                                ",",
-                                                                ""
-                                                            )
+                                                            product.Product.price
+                                                                .toString()
+                                                                .replaceAll(
+                                                                    ",",
+                                                                    ""
+                                                                )
                                                         ) *
                                                             25) /
                                                             100
