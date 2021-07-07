@@ -117,7 +117,7 @@ export default class Admin extends Component {
     };
 
     showInput = async (name, price) => {
-        this.setState({ changeprice: price.replaceAll(",") });
+        this.setState({ changeprice: price.replaceAll(",", "") });
         document.getElementById(`input-${name}`).style.display = "block";
         document.getElementById(`edit-${name}`).style.display = "none";
         document.getElementById(`change-${name}`).style.display = "block";
@@ -323,16 +323,20 @@ export default class Admin extends Component {
                                                     Rs.
                                                     {(
                                                         parseInt(
-                                                            data.price.replaceAll(
-                                                                ",",
-                                                                ""
-                                                            )
+                                                            data.price
+                                                                .toString()
+                                                                .replaceAll(
+                                                                    ",",
+                                                                    ""
+                                                                )
                                                         ) -
                                                         (parseInt(
-                                                            data.price.replaceAll(
-                                                                ",",
-                                                                ""
-                                                            )
+                                                            data.price
+                                                                .toString()
+                                                                .replaceAll(
+                                                                    ",",
+                                                                    ""
+                                                                )
                                                         ) *
                                                             25) /
                                                             100

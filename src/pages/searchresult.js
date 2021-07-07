@@ -217,16 +217,20 @@ export default class SearchResult extends Component {
                                                   Rs.
                                                   {Math.round(
                                                       parseInt(
-                                                          product.item.price.replaceAll(
-                                                              ",",
-                                                              ""
-                                                          )
-                                                      ) -
-                                                          (parseInt(
-                                                              product.item.price.replaceAll(
+                                                          product.item.price
+                                                              .toString()
+                                                              .replaceAll(
                                                                   ",",
                                                                   ""
                                                               )
+                                                      ) -
+                                                          (parseInt(
+                                                              product.item.price
+                                                                  .toString()
+                                                                  .replaceAll(
+                                                                      ",",
+                                                                      ""
+                                                                  )
                                                           ) *
                                                               25) /
                                                               100
@@ -370,16 +374,17 @@ export default class SearchResult extends Component {
                                                 Rs.
                                                 {Math.round(
                                                     parseInt(
-                                                        product.item.price.replaceAll(
-                                                            ",",
-                                                            ""
-                                                        )
+                                                        product.item.price
+                                                            .toString()
+                                                            .replaceAll(",", "")
                                                     ) -
                                                         (parseInt(
-                                                            product.item.price.replaceAll(
-                                                                ",",
-                                                                ""
-                                                            )
+                                                            product.item.price
+                                                                .toString()
+                                                                .replaceAll(
+                                                                    ",",
+                                                                    ""
+                                                                )
                                                         ) *
                                                             25) /
                                                             100

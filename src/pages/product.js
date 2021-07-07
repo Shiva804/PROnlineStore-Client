@@ -107,8 +107,8 @@ export default class Product extends Component {
             let products = this.state.products;
 
             products = products.sort((a, b) =>
-                parseInt(a.price.replaceAll(",", "")) >
-                parseInt(b.price.replaceAll(",", ""))
+                parseInt(a.price.toString().replaceAll(",", "")) >
+                parseInt(b.price.toString().replaceAll(",", ""))
                     ? 1
                     : -1
             );
@@ -126,8 +126,8 @@ export default class Product extends Component {
             let products = this.state.products;
 
             products = products.sort((a, b) =>
-                parseInt(a.price.replaceAll(",", "")) <
-                parseInt(b.price.replaceAll(",", ""))
+                parseInt(a.price.toString().replaceAll(",", "")) <
+                parseInt(b.price.toString().replaceAll(",", ""))
                     ? 1
                     : -1
             );
@@ -307,16 +307,20 @@ export default class Product extends Component {
                                                   Rs.
                                                   {(
                                                       parseInt(
-                                                          product.price.replaceAll(
-                                                              ",",
-                                                              ""
-                                                          )
+                                                          product.price
+                                                              .toString()
+                                                              .replaceAll(
+                                                                  ",",
+                                                                  ""
+                                                              )
                                                       ) -
                                                       (parseInt(
-                                                          product.price.replaceAll(
-                                                              ",",
-                                                              ""
-                                                          )
+                                                          product.price
+                                                              .toString()
+                                                              .replaceAll(
+                                                                  ",",
+                                                                  ""
+                                                              )
                                                       ) *
                                                           25) /
                                                           100
@@ -484,10 +488,9 @@ export default class Product extends Component {
                                               >
                                                   Rs.
                                                   {parseInt(
-                                                      product.price.replaceAll(
-                                                          ",",
-                                                          ""
-                                                      )
+                                                      product.price
+                                                          .toString()
+                                                          .replaceAll(",", "")
                                                   ).toLocaleString("en-US")}
                                               </h6>
 
@@ -495,16 +498,20 @@ export default class Product extends Component {
                                                   Rs.
                                                   {Math.round(
                                                       parseInt(
-                                                          product.price.replaceAll(
-                                                              ",",
-                                                              ""
-                                                          )
-                                                      ) -
-                                                          (parseInt(
-                                                              product.price.replaceAll(
+                                                          product.price
+                                                              .toString()
+                                                              .replaceAll(
                                                                   ",",
                                                                   ""
                                                               )
+                                                      ) -
+                                                          (parseInt(
+                                                              product.price
+                                                                  .toString()
+                                                                  .replaceAll(
+                                                                      ",",
+                                                                      ""
+                                                                  )
                                                           ) *
                                                               25) /
                                                               100
