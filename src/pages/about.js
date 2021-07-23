@@ -25,13 +25,12 @@ export default class About extends Component {
                         PR Online Store – One stop shop for all furniture needs
                         and can offer various industrial furniture products. PR
                         Online Store is a unit of PR Consultants. PR Consultants
-                        provide all industrial laboratory and furnitures, and
-                        established its own identity in the Southern India as
-                        reliable, trustworthy supplier for Test equipments,
-                        Analytical Instruments and industrial furniture and set
-                        up providing technical guidance, selection of basis of
-                        workspace with optional accessories, installation of
-                        equipment and rendering after sales services.
+                        provide all industrial furnitures, and established its
+                        own identity in the Southern India as reliable,
+                        trustworthy supplier industrial and office furniture and
+                        set up providing technical guidance, selection of basis
+                        of workspace with optional accessories and rendering
+                        after sales services.
                         <br />
                         <br />
                         PR Consultants has established excellent report with our
