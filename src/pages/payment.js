@@ -27,7 +27,7 @@ class Payment extends Component {
             amount: order.data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             currency: order.data.currency,
             name: "PR Online Store",
-            description: "Test Transaction",
+            description: "",
             image: logo,
             handler: () => {
                 this.props.history.push(
