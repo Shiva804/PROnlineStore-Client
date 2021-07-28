@@ -124,9 +124,9 @@ class Cart extends Component {
                                             </h5>
                                             <h5>
                                                 Rs.
-                                                {this.state.total.toLocaleString(
-                                                    "en-US"
-                                                )}
+                                                {this.state.total
+                                                    .toString()
+                                                    .toLocaleString("en-US")}
                                             </h5>
                                         </div>
                                         <div id="mobile-finalprice">
@@ -134,9 +134,10 @@ class Cart extends Component {
 
                                             <h5>
                                                 Rs.
-                                                {this.state.gst.toLocaleString(
-                                                    "en-US"
-                                                )}
+                                                {this.state.gst
+                                                    .toFixed()
+                                                    .toString()
+                                                    .toLocaleString("en-US")}
                                             </h5>
                                         </div>
                                         <div id="mobile-finalprice">
@@ -146,9 +147,9 @@ class Cart extends Component {
                                             </h4>
                                             <h5>
                                                 Rs.
-                                                {this.state.subtotal.toLocaleString(
-                                                    "en-US"
-                                                )}
+                                                {this.state.subtotal
+                                                    .toString()
+                                                    .toLocaleString("en-US")}
                                             </h5>
                                         </div>
                                         <p id="fd-m">*Free Delivery*</p>
@@ -253,9 +254,9 @@ class Cart extends Component {
                                     <h5>Total ({this.state.quantity}):</h5>
                                     <h5>
                                         Rs.
-                                        {this.state.total.toLocaleString(
-                                            "en-US"
-                                        )}
+                                        {this.state.total
+                                            .toString()
+                                            .toLocaleString("en-US")}
                                     </h5>
                                 </div>
                                 {parseInt(localStorage.getItem("cart")) > 0 ? (
@@ -264,9 +265,10 @@ class Cart extends Component {
                                             <h5>GST (18%):</h5>
                                             <h5>
                                                 Rs.
-                                                {this.state.gst.toLocaleString(
-                                                    "en-US"
-                                                )}
+                                                {this.state.gst
+                                                    .toFixed(2)
+                                                    .toString()
+                                                    .toLocaleString("en-US")}
                                             </h5>
                                         </div>
                                         <div id="finalprice">
@@ -276,9 +278,9 @@ class Cart extends Component {
                                             </h4>
                                             <h5>
                                                 Rs.
-                                                {this.state.subtotal.toLocaleString(
-                                                    "en-US"
-                                                )}
+                                                {this.state.subtotal
+                                                    .toString()
+                                                    .toLocaleString("en-US")}
                                             </h5>
 
                                             <br />

@@ -247,8 +247,8 @@ tr:nth-child(even) {
 .nav li a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.781);
-    font-weight: bolder;
-    font-family: "poppins";
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 #dropdown {
